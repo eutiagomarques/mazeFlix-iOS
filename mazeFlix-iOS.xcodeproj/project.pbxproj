@@ -9,7 +9,7 @@
 /* Begin PBXBuildFile section */
 		EA5611EE26657DC000AA961B /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA5611ED26657DC000AA961B /* AppDelegate.swift */; };
 		EA5611F026657DC000AA961B /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA5611EF26657DC000AA961B /* SceneDelegate.swift */; };
-		EA5611F226657DC000AA961B /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA5611F126657DC000AA961B /* ViewController.swift */; };
+		EA5611F226657DC000AA961B /* MainController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA5611F126657DC000AA961B /* MainController.swift */; };
 		EA5611F526657DC000AA961B /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EA5611F326657DC000AA961B /* Main.storyboard */; };
 		EA5611F726657DC400AA961B /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = EA5611F626657DC400AA961B /* Assets.xcassets */; };
 		EA5611FA26657DC400AA961B /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EA5611F826657DC400AA961B /* LaunchScreen.storyboard */; };
@@ -38,7 +38,7 @@
 		EA5611EA26657DC000AA961B /* mazeFlix-iOS.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "mazeFlix-iOS.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		EA5611ED26657DC000AA961B /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		EA5611EF26657DC000AA961B /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		EA5611F126657DC000AA961B /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		EA5611F126657DC000AA961B /* MainController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainController.swift; sourceTree = "<group>"; };
 		EA5611F426657DC000AA961B /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		EA5611F626657DC400AA961B /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		EA5611F926657DC400AA961B /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -99,10 +99,10 @@
 		EA5611EC26657DC000AA961B /* mazeFlix-iOS */ = {
 			isa = PBXGroup;
 			children = (
+				EA5612302665864F00AA961B /* Controllers */,
+				EA56122F266585D200AA961B /* Views */,
 				EA5611ED26657DC000AA961B /* AppDelegate.swift */,
 				EA5611EF26657DC000AA961B /* SceneDelegate.swift */,
-				EA5611F126657DC000AA961B /* ViewController.swift */,
-				EA5611F326657DC000AA961B /* Main.storyboard */,
 				EA5611F626657DC400AA961B /* Assets.xcassets */,
 				EA5611F826657DC400AA961B /* LaunchScreen.storyboard */,
 				EA5611FB26657DC400AA961B /* Info.plist */,
@@ -126,6 +126,22 @@
 				EA56121126657DC400AA961B /* Info.plist */,
 			);
 			path = "mazeFlix-iOSUITests";
+			sourceTree = "<group>";
+		};
+		EA56122F266585D200AA961B /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				EA5611F326657DC000AA961B /* Main.storyboard */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		EA5612302665864F00AA961B /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				EA5611F126657DC000AA961B /* MainController.swift */,
+			);
+			path = Controllers;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -258,7 +274,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				EA5611F226657DC000AA961B /* ViewController.swift in Sources */,
+				EA5611F226657DC000AA961B /* MainController.swift in Sources */,
 				EA5611EE26657DC000AA961B /* AppDelegate.swift in Sources */,
 				EA5611F026657DC000AA961B /* SceneDelegate.swift in Sources */,
 			);
