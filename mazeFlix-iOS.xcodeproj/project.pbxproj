@@ -1,0 +1,592 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 50;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		EA5611EE26657DC000AA961B /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA5611ED26657DC000AA961B /* AppDelegate.swift */; };
+		EA5611F026657DC000AA961B /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA5611EF26657DC000AA961B /* SceneDelegate.swift */; };
+		EA5611F226657DC000AA961B /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA5611F126657DC000AA961B /* ViewController.swift */; };
+		EA5611F526657DC000AA961B /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EA5611F326657DC000AA961B /* Main.storyboard */; };
+		EA5611F726657DC400AA961B /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = EA5611F626657DC400AA961B /* Assets.xcassets */; };
+		EA5611FA26657DC400AA961B /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EA5611F826657DC400AA961B /* LaunchScreen.storyboard */; };
+		EA56120526657DC400AA961B /* mazeFlix_iOSTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA56120426657DC400AA961B /* mazeFlix_iOSTests.swift */; };
+		EA56121026657DC400AA961B /* mazeFlix_iOSUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA56120F26657DC400AA961B /* mazeFlix_iOSUITests.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		EA56120126657DC400AA961B /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = EA5611E226657DBF00AA961B /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = EA5611E926657DBF00AA961B;
+			remoteInfo = "mazeFlix-iOS";
+		};
+		EA56120C26657DC400AA961B /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = EA5611E226657DBF00AA961B /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = EA5611E926657DBF00AA961B;
+			remoteInfo = "mazeFlix-iOS";
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		EA5611EA26657DC000AA961B /* mazeFlix-iOS.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "mazeFlix-iOS.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		EA5611ED26657DC000AA961B /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		EA5611EF26657DC000AA961B /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
+		EA5611F126657DC000AA961B /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		EA5611F426657DC000AA961B /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		EA5611F626657DC400AA961B /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		EA5611F926657DC400AA961B /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		EA5611FB26657DC400AA961B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		EA56120026657DC400AA961B /* mazeFlix-iOSTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "mazeFlix-iOSTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		EA56120426657DC400AA961B /* mazeFlix_iOSTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = mazeFlix_iOSTests.swift; sourceTree = "<group>"; };
+		EA56120626657DC400AA961B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		EA56120B26657DC400AA961B /* mazeFlix-iOSUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "mazeFlix-iOSUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		EA56120F26657DC400AA961B /* mazeFlix_iOSUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = mazeFlix_iOSUITests.swift; sourceTree = "<group>"; };
+		EA56121126657DC400AA961B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		EA5611E726657DBF00AA961B /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		EA5611FD26657DC400AA961B /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		EA56120826657DC400AA961B /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		EA5611E126657DBF00AA961B = {
+			isa = PBXGroup;
+			children = (
+				EA5611EC26657DC000AA961B /* mazeFlix-iOS */,
+				EA56120326657DC400AA961B /* mazeFlix-iOSTests */,
+				EA56120E26657DC400AA961B /* mazeFlix-iOSUITests */,
+				EA5611EB26657DC000AA961B /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		EA5611EB26657DC000AA961B /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				EA5611EA26657DC000AA961B /* mazeFlix-iOS.app */,
+				EA56120026657DC400AA961B /* mazeFlix-iOSTests.xctest */,
+				EA56120B26657DC400AA961B /* mazeFlix-iOSUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		EA5611EC26657DC000AA961B /* mazeFlix-iOS */ = {
+			isa = PBXGroup;
+			children = (
+				EA5611ED26657DC000AA961B /* AppDelegate.swift */,
+				EA5611EF26657DC000AA961B /* SceneDelegate.swift */,
+				EA5611F126657DC000AA961B /* ViewController.swift */,
+				EA5611F326657DC000AA961B /* Main.storyboard */,
+				EA5611F626657DC400AA961B /* Assets.xcassets */,
+				EA5611F826657DC400AA961B /* LaunchScreen.storyboard */,
+				EA5611FB26657DC400AA961B /* Info.plist */,
+			);
+			path = "mazeFlix-iOS";
+			sourceTree = "<group>";
+		};
+		EA56120326657DC400AA961B /* mazeFlix-iOSTests */ = {
+			isa = PBXGroup;
+			children = (
+				EA56120426657DC400AA961B /* mazeFlix_iOSTests.swift */,
+				EA56120626657DC400AA961B /* Info.plist */,
+			);
+			path = "mazeFlix-iOSTests";
+			sourceTree = "<group>";
+		};
+		EA56120E26657DC400AA961B /* mazeFlix-iOSUITests */ = {
+			isa = PBXGroup;
+			children = (
+				EA56120F26657DC400AA961B /* mazeFlix_iOSUITests.swift */,
+				EA56121126657DC400AA961B /* Info.plist */,
+			);
+			path = "mazeFlix-iOSUITests";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		EA5611E926657DBF00AA961B /* mazeFlix-iOS */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = EA56121426657DC400AA961B /* Build configuration list for PBXNativeTarget "mazeFlix-iOS" */;
+			buildPhases = (
+				EA5611E626657DBF00AA961B /* Sources */,
+				EA5611E726657DBF00AA961B /* Frameworks */,
+				EA5611E826657DBF00AA961B /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "mazeFlix-iOS";
+			productName = "mazeFlix-iOS";
+			productReference = EA5611EA26657DC000AA961B /* mazeFlix-iOS.app */;
+			productType = "com.apple.product-type.application";
+		};
+		EA5611FF26657DC400AA961B /* mazeFlix-iOSTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = EA56121726657DC400AA961B /* Build configuration list for PBXNativeTarget "mazeFlix-iOSTests" */;
+			buildPhases = (
+				EA5611FC26657DC400AA961B /* Sources */,
+				EA5611FD26657DC400AA961B /* Frameworks */,
+				EA5611FE26657DC400AA961B /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				EA56120226657DC400AA961B /* PBXTargetDependency */,
+			);
+			name = "mazeFlix-iOSTests";
+			productName = "mazeFlix-iOSTests";
+			productReference = EA56120026657DC400AA961B /* mazeFlix-iOSTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		EA56120A26657DC400AA961B /* mazeFlix-iOSUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = EA56121A26657DC400AA961B /* Build configuration list for PBXNativeTarget "mazeFlix-iOSUITests" */;
+			buildPhases = (
+				EA56120726657DC400AA961B /* Sources */,
+				EA56120826657DC400AA961B /* Frameworks */,
+				EA56120926657DC400AA961B /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				EA56120D26657DC400AA961B /* PBXTargetDependency */,
+			);
+			name = "mazeFlix-iOSUITests";
+			productName = "mazeFlix-iOSUITests";
+			productReference = EA56120B26657DC400AA961B /* mazeFlix-iOSUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		EA5611E226657DBF00AA961B /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 1240;
+				LastUpgradeCheck = 1240;
+				TargetAttributes = {
+					EA5611E926657DBF00AA961B = {
+						CreatedOnToolsVersion = 12.4;
+					};
+					EA5611FF26657DC400AA961B = {
+						CreatedOnToolsVersion = 12.4;
+						TestTargetID = EA5611E926657DBF00AA961B;
+					};
+					EA56120A26657DC400AA961B = {
+						CreatedOnToolsVersion = 12.4;
+						TestTargetID = EA5611E926657DBF00AA961B;
+					};
+				};
+			};
+			buildConfigurationList = EA5611E526657DBF00AA961B /* Build configuration list for PBXProject "mazeFlix-iOS" */;
+			compatibilityVersion = "Xcode 9.3";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = EA5611E126657DBF00AA961B;
+			productRefGroup = EA5611EB26657DC000AA961B /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				EA5611E926657DBF00AA961B /* mazeFlix-iOS */,
+				EA5611FF26657DC400AA961B /* mazeFlix-iOSTests */,
+				EA56120A26657DC400AA961B /* mazeFlix-iOSUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		EA5611E826657DBF00AA961B /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				EA5611FA26657DC400AA961B /* LaunchScreen.storyboard in Resources */,
+				EA5611F726657DC400AA961B /* Assets.xcassets in Resources */,
+				EA5611F526657DC000AA961B /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		EA5611FE26657DC400AA961B /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		EA56120926657DC400AA961B /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		EA5611E626657DBF00AA961B /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				EA5611F226657DC000AA961B /* ViewController.swift in Sources */,
+				EA5611EE26657DC000AA961B /* AppDelegate.swift in Sources */,
+				EA5611F026657DC000AA961B /* SceneDelegate.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		EA5611FC26657DC400AA961B /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				EA56120526657DC400AA961B /* mazeFlix_iOSTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		EA56120726657DC400AA961B /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				EA56121026657DC400AA961B /* mazeFlix_iOSUITests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		EA56120226657DC400AA961B /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = EA5611E926657DBF00AA961B /* mazeFlix-iOS */;
+			targetProxy = EA56120126657DC400AA961B /* PBXContainerItemProxy */;
+		};
+		EA56120D26657DC400AA961B /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = EA5611E926657DBF00AA961B /* mazeFlix-iOS */;
+			targetProxy = EA56120C26657DC400AA961B /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		EA5611F326657DC000AA961B /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				EA5611F426657DC000AA961B /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		EA5611F826657DC400AA961B /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				EA5611F926657DC400AA961B /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		EA56121226657DC400AA961B /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.4;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		EA56121326657DC400AA961B /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.4;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		EA56121526657DC400AA961B /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = "mazeFlix-iOS/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "com.tiagomarques.mazeFlix-iOS";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		EA56121626657DC400AA961B /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = "mazeFlix-iOS/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "com.tiagomarques.mazeFlix-iOS";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		EA56121826657DC400AA961B /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = "mazeFlix-iOSTests/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 14.4;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "com.tiagomarques.mazeFlix-iOSTests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/mazeFlix-iOS.app/mazeFlix-iOS";
+			};
+			name = Debug;
+		};
+		EA56121926657DC400AA961B /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = "mazeFlix-iOSTests/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 14.4;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "com.tiagomarques.mazeFlix-iOSTests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/mazeFlix-iOS.app/mazeFlix-iOS";
+			};
+			name = Release;
+		};
+		EA56121B26657DC400AA961B /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = "mazeFlix-iOSUITests/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "com.tiagomarques.mazeFlix-iOSUITests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = "mazeFlix-iOS";
+			};
+			name = Debug;
+		};
+		EA56121C26657DC400AA961B /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = "mazeFlix-iOSUITests/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "com.tiagomarques.mazeFlix-iOSUITests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = "mazeFlix-iOS";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		EA5611E526657DBF00AA961B /* Build configuration list for PBXProject "mazeFlix-iOS" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				EA56121226657DC400AA961B /* Debug */,
+				EA56121326657DC400AA961B /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		EA56121426657DC400AA961B /* Build configuration list for PBXNativeTarget "mazeFlix-iOS" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				EA56121526657DC400AA961B /* Debug */,
+				EA56121626657DC400AA961B /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		EA56121726657DC400AA961B /* Build configuration list for PBXNativeTarget "mazeFlix-iOSTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				EA56121826657DC400AA961B /* Debug */,
+				EA56121926657DC400AA961B /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		EA56121A26657DC400AA961B /* Build configuration list for PBXNativeTarget "mazeFlix-iOSUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				EA56121B26657DC400AA961B /* Debug */,
+				EA56121C26657DC400AA961B /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = EA5611E226657DBF00AA961B /* Project object */;
+}
