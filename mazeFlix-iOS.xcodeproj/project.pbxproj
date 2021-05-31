@@ -3,7 +3,7 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 51;
 	objects = {
 
 /* Begin PBXBuildFile section */
@@ -123,7 +123,6 @@
 				6261DEF784000F345F7D742F /* Pods-mazeFlix-iOSTests.debug.xcconfig */,
 				C169A8A81208E92015D7BD05 /* Pods-mazeFlix-iOSTests.release.xcconfig */,
 			);
-			name = Pods;
 			path = Pods;
 			sourceTree = "<group>";
 		};
