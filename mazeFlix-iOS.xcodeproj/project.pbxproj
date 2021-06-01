@@ -23,7 +23,7 @@
 		EA56124426658AAA00AA961B /* Image.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA56124326658AAA00AA961B /* Image.swift */; };
 		EA56124926658AD100AA961B /* Schedule.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA56124826658AD100AA961B /* Schedule.swift */; };
 		EA56124E26658B0300AA961B /* Episode.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA56124D26658B0300AA961B /* Episode.swift */; };
-		EA56125326658B4C00AA961B /* ApiService.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA56125226658B4C00AA961B /* ApiService.swift */; };
+		EAAD9E4F266685D900DAD6B6 /* SpinnerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EAAD9E4E266685D900DAD6B6 /* SpinnerViewController.swift */; };
 		EAB79B6B2665981A00D439B5 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = EAB79B6A2665981A00D439B5 /* Constants.swift */; };
 		EAB79B732665C9AD00D439B5 /* SeriesController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EAB79B722665C9AD00D439B5 /* SeriesController.swift */; };
 /* End PBXBuildFile section */
@@ -74,7 +74,7 @@
 		EA56124326658AAA00AA961B /* Image.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Image.swift; sourceTree = "<group>"; };
 		EA56124826658AD100AA961B /* Schedule.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Schedule.swift; sourceTree = "<group>"; };
 		EA56124D26658B0300AA961B /* Episode.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Episode.swift; sourceTree = "<group>"; };
-		EA56125226658B4C00AA961B /* ApiService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ApiService.swift; sourceTree = "<group>"; };
+		EAAD9E4E266685D900DAD6B6 /* SpinnerViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SpinnerViewController.swift; sourceTree = "<group>"; };
 		EAB79B6A2665981A00D439B5 /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 		EAB79B722665C9AD00D439B5 /* SeriesController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SeriesController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -156,7 +156,6 @@
 			isa = PBXGroup;
 			children = (
 				EAB79B69266597F800D439B5 /* Constants */,
-				EA561235266589D600AA961B /* Services */,
 				EA561234266589CD00AA961B /* Models */,
 				EA5612302665864F00AA961B /* Controllers */,
 				EA56122F266585D200AA961B /* Views */,
@@ -200,6 +199,7 @@
 			children = (
 				EA5611F126657DC000AA961B /* MainController.swift */,
 				EAB79B722665C9AD00D439B5 /* SeriesController.swift */,
+				EAAD9E4E266685D900DAD6B6 /* SpinnerViewController.swift */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -214,14 +214,6 @@
 				EA56124D26658B0300AA961B /* Episode.swift */,
 			);
 			path = Models;
-			sourceTree = "<group>";
-		};
-		EA561235266589D600AA961B /* Services */ = {
-			isa = PBXGroup;
-			children = (
-				EA56125226658B4C00AA961B /* ApiService.swift */,
-			);
-			path = Services;
 			sourceTree = "<group>";
 		};
 		EAB79B69266597F800D439B5 /* Constants */ = {
@@ -474,10 +466,10 @@
 				EA56124E26658B0300AA961B /* Episode.swift in Sources */,
 				EA56124426658AAA00AA961B /* Image.swift in Sources */,
 				EA5611EE26657DC000AA961B /* AppDelegate.swift in Sources */,
+				EAAD9E4F266685D900DAD6B6 /* SpinnerViewController.swift in Sources */,
 				EA56123726658A4800AA961B /* Show.swift in Sources */,
 				EAB79B6B2665981A00D439B5 /* Constants.swift in Sources */,
 				EAB79B732665C9AD00D439B5 /* SeriesController.swift in Sources */,
-				EA56125326658B4C00AA961B /* ApiService.swift in Sources */,
 				EA5611F026657DC000AA961B /* SceneDelegate.swift in Sources */,
 				EA56124926658AD100AA961B /* Schedule.swift in Sources */,
 				EA56123F26658A5400AA961B /* Serie.swift in Sources */,

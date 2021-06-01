@@ -13,5 +13,5 @@ struct Show: Decodable {
     var image: Image?
     var schedule: Schedule?
     var genres: [String]?
-    var sumary: String?
+    var sumary: String?    
 }

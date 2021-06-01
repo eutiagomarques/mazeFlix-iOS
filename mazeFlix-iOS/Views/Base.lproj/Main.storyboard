@@ -33,7 +33,7 @@
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <state key="normal" title="button"/>
                                 <connections>
-                                    <segue destination="1vU-EP-Bdl" kind="show" identifier="goSeries" id="LUE-96-r9x"/>
+                                    <segue destination="KQe-oK-9vv" kind="show" id="Gys-Eg-eZj"/>
                                 </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="blablabla" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="s5U-Ho-GIU">
@@ -65,21 +65,34 @@
             </objects>
             <point key="canvasLocation" x="1960.8695652173915" y="116.51785714285714"/>
         </scene>
-        <!--Series-->
-        <scene sceneID="gnt-dP-mVi">
+        <!--Series Controller-->
+        <scene sceneID="qc8-TZ-qF0">
             <objects>
-                <viewController title="Series" id="1vU-EP-Bdl" customClass="SeriesController" customModule="mazeFlix_iOS" customModuleProvider="target" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="oIp-lH-Gea">
+                <tableViewController id="KQe-oK-9vv" customClass="SeriesController" customModule="mazeFlix_iOS" customModuleProvider="target" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="hFi-TM-TKN" customClass="Ser">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <viewLayoutGuide key="safeArea" id="oMn-3k-Lzj"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
-                    </view>
-                    <navigationItem key="navigationItem" title="Series" id="tFg-5U-0dF"/>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="hVY-t1-lXg" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+                        <prototypes>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="seriesCell" id="Nb4-l1-hEl">
+                                <rect key="frame" x="0.0" y="28" width="414" height="43.5"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="Nb4-l1-hEl" id="3Sz-p1-1XF">
+                                    <rect key="frame" x="0.0" y="0.0" width="414" height="43.5"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                </tableViewCellContentView>
+                            </tableViewCell>
+                        </prototypes>
+                        <connections>
+                            <outlet property="dataSource" destination="KQe-oK-9vv" id="Hav-M9-dOd"/>
+                            <outlet property="delegate" destination="KQe-oK-9vv" id="5yl-dz-6Js"/>
+                        </connections>
+                    </tableView>
+                    <navigationItem key="navigationItem" id="MYb-da-rbw"/>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Mvr-tf-mwv" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2796" y="117"/>
+            <point key="canvasLocation" x="2736" y="117"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="67Q-e2-nJu">
