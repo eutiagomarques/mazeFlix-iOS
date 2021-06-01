@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="17701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="17701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="Fdh-3g-DDg">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17703"/>
@@ -8,7 +8,7 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--Home-->
+        <!--Main Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
                 <viewController id="BYZ-38-t0r" customClass="MainController" customModule="mazeFlix_iOS" customModuleProvider="target" sceneMemberID="viewController">
@@ -16,29 +16,93 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="mazeflixBanner" translatesAutoresizingMaskIntoConstraints="NO" id="qkb-de-HNU">
-                                <rect key="frame" x="95" y="58" width="225" height="117"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="mazeflixBanner" translatesAutoresizingMaskIntoConstraints="NO" id="qkb-de-HNU">
+                                <rect key="frame" x="94.5" y="148" width="225" height="117"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="117" id="Ctj-tu-4C0"/>
+                                    <constraint firstAttribute="width" constant="225" id="mzz-Wf-dcl"/>
+                                </constraints>
                             </imageView>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="blablabla" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="s5U-Ho-GIU">
-                                <rect key="frame" x="171" y="183" width="73" height="17"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" name="HiraMaruProN-W4" family="Hiragino Maru Gothic ProN" pointSize="17"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="xed-r0-Uxf" customClass="Mainframe">
+                                <rect key="frame" x="94.5" y="451" width="225" height="42"/>
+                                <color key="backgroundColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="42" id="DjI-50-BQe"/>
+                                    <constraint firstAttribute="width" constant="225" id="bUC-DQ-JPQ"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <state key="normal" title="button"/>
+                                <connections>
+                                    <segue destination="1vU-EP-Bdl" kind="show" identifier="goSeries" id="LUE-96-r9x"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="blablabla" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="s5U-Ho-GIU">
+                                <rect key="frame" x="74" y="240" width="267" height="59"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="14"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="xed-r0-Uxf">
-                                <rect key="frame" x="186" y="337" width="45" height="30"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" title="button"/>
-                            </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="qkb-de-HNU" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="2qT-Nk-Xty"/>
+                            <constraint firstItem="xed-r0-Uxf" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="Ace-Tm-wmW"/>
+                            <constraint firstItem="qkb-de-HNU" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="60" id="CLB-1X-Mi5"/>
+                            <constraint firstItem="s5U-Ho-GIU" firstAttribute="top" secondItem="qkb-de-HNU" secondAttribute="bottom" constant="19" id="L3f-jY-NCM"/>
+                            <constraint firstItem="s5U-Ho-GIU" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="h90-UH-knw"/>
+                            <constraint firstItem="xed-r0-Uxf" firstAttribute="top" secondItem="s5U-Ho-GIU" secondAttribute="bottom" constant="150" id="v6e-DB-eSR"/>
+                        </constraints>
                     </view>
-                    <navigationItem key="navigationItem" title="Home" id="iPi-A2-7bz"/>
+                    <navigationItem key="navigationItem" id="iPi-A2-7bz"/>
+                    <connections>
+                        <outlet property="btnGoSeriesView" destination="xed-r0-Uxf" id="o4X-oO-Jhg"/>
+                        <outlet property="labelWelcomeMessage" destination="s5U-Ho-GIU" id="VXV-kM-aSb"/>
+                        <outlet property="navigationBar" destination="iPi-A2-7bz" id="eCJ-Gv-qwm"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1960.8695652173915" y="116.51785714285714"/>
+        </scene>
+        <!--Series-->
+        <scene sceneID="gnt-dP-mVi">
+            <objects>
+                <viewController title="Series" id="1vU-EP-Bdl" customClass="SeriesController" customModule="mazeFlix_iOS" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="oIp-lH-Gea">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <viewLayoutGuide key="safeArea" id="oMn-3k-Lzj"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    </view>
+                    <navigationItem key="navigationItem" title="Series" id="tFg-5U-0dF"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="hVY-t1-lXg" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2796" y="117"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="67Q-e2-nJu">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="Fdh-3g-DDg" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="0SR-W8-aUv">
+                        <rect key="frame" x="0.0" y="44" width="414" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                        <color key="tintColor" red="1" green="0.56862745098039214" blue="0.30196078431372547" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <textAttributes key="titleTextAttributes">
+                            <color key="textColor" red="0.30588235294117649" green="0.35686274509803922" blue="0.37647058823529411" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        </textAttributes>
+                        <textAttributes key="largeTitleTextAttributes">
+                            <color key="textColor" red="1" green="0.56862745098039214" blue="0.30196078431372547" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        </textAttributes>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="BYZ-38-t0r" kind="relationship" relationship="rootViewController" id="e4H-Ci-Z6S"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="NGu-lI-E8A" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1050.7246376811595" y="116.51785714285714"/>
         </scene>

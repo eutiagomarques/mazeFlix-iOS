@@ -24,11 +24,11 @@ class ApiService {
                 switch response.result {
                 case .success:
                     let seriesList: [Serie] = try! JSONDecoder().decode([Serie].self, from: response.data!)
-                    // CÓDIGO DE SUCESSO DA API
+//                    CÓDIGO DE SUCESSO DA API
                     
-                    seriesList.forEach { (serie) in
-                        print(serie.show.name!)
-                    }
+//                    seriesList.forEach { (serie) in
+//                        print(serie.show.name!)
+//                    }
                     
                     break
                 case .failure(let error):
@@ -46,7 +46,7 @@ class ApiService {
                 switch response.result {
                 case .success:
                     let showList: [Show] = try! JSONDecoder().decode([Show].self, from: response.data!)
-                    // CÓDIGO DE SUCESSO DA API
+//                    CÓDIGO DE SUCESSO DA API
                     
                     break
                 case .failure(let error):
@@ -64,7 +64,7 @@ class ApiService {
                 switch response.result {
                 case .success:
                     let episodesList: [Episode] = try! JSONDecoder().decode([Episode].self, from: response.data!)
-                    // CÓDIGO DE SUCESSO DA API
+//                    CÓDIGO DE SUCESSO DA API
                     
                     break
                 case .failure(let error):

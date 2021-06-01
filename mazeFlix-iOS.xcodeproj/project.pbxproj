@@ -25,6 +25,7 @@
 		EA56124E26658B0300AA961B /* Episode.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA56124D26658B0300AA961B /* Episode.swift */; };
 		EA56125326658B4C00AA961B /* ApiService.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA56125226658B4C00AA961B /* ApiService.swift */; };
 		EAB79B6B2665981A00D439B5 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = EAB79B6A2665981A00D439B5 /* Constants.swift */; };
+		EAB79B732665C9AD00D439B5 /* SeriesController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EAB79B722665C9AD00D439B5 /* SeriesController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -75,6 +76,7 @@
 		EA56124D26658B0300AA961B /* Episode.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Episode.swift; sourceTree = "<group>"; };
 		EA56125226658B4C00AA961B /* ApiService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ApiService.swift; sourceTree = "<group>"; };
 		EAB79B6A2665981A00D439B5 /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
+		EAB79B722665C9AD00D439B5 /* SeriesController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SeriesController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -197,6 +199,7 @@
 			isa = PBXGroup;
 			children = (
 				EA5611F126657DC000AA961B /* MainController.swift */,
+				EAB79B722665C9AD00D439B5 /* SeriesController.swift */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -473,6 +476,7 @@
 				EA5611EE26657DC000AA961B /* AppDelegate.swift in Sources */,
 				EA56123726658A4800AA961B /* Show.swift in Sources */,
 				EAB79B6B2665981A00D439B5 /* Constants.swift in Sources */,
+				EAB79B732665C9AD00D439B5 /* SeriesController.swift in Sources */,
 				EA56125326658B4C00AA961B /* ApiService.swift in Sources */,
 				EA5611F026657DC000AA961B /* SceneDelegate.swift in Sources */,
 				EA56124926658AD100AA961B /* Schedule.swift in Sources */,
