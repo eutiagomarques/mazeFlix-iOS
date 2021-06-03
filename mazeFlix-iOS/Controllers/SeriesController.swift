@@ -7,83 +7,53 @@
 
 import Foundation
 import UIKit
-import SwiftyJSON
 
-class SeriesController: UITableViewController {
+class SeriesController: UIViewController, UITableViewDataSource {
+    
     
     // MARK: - Properties    
-    var apiPage = 1
+    var apiPage = 0
     var showList: [Show] = []
-    let spinner = SpinnerViewController()
+    let api = ApiService.init()
+    @IBOutlet weak var tableView: UITableView!
     
     // MARK: - View Lifecycle
     override func viewWillAppear(_ animated: Bool) {
-        startSpinner()
-        getSeries(page: apiPage)
+        tableView.dataSource = self
     }
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        showList = api.getSeries(page: self.apiPage)
+        tableView.reloadData()
     }
     
-    
-    // MARK: - Table Lifecycle
-    override func numberOfSections(in tableView: UITableView) -> Int {
-        return 1
-    }
-    
-    override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+    // MARK: - TableView LifeCycle
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return showList.count
     }
     
-    override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        
-        let cell = tableView.dequeueReusableCell(withIdentifier: "seriesCell", for: indexPath)
-        cell.textLabel?.text = showList[indexPath.row].name        
-        
+    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        let cell = tableView.dequeueReusableCell(withIdentifier: "cell", for: indexPath) as! ShowCell
+        cell.showLabelView.text = showList[indexPath.row].name
+        cell.showImageView.image = showList[indexPath.row].image.image
+        setupLabel(tableView: cell)
+        setupImageView(tableView: cell)
         return cell
     }
     
     
+    // MARK: - Setup View Elements
     
-    
-    //MARK: - Requests
-    func getSeries(page: Int){
-        
-        let url = URL(string: Constants.baseUrl + "shows?page=\(page)" )
-        
-        let tarefa = URLSession.shared.dataTask(with: url!) { [self] (response, request, erro) in
-            if erro == nil {
-                if response != nil {
-                    do{
-                        let shows: [Show] = try! JSONDecoder().decode([Show].self, from: response!)
-                        shows.forEach { (show) in
-                            showList.append(show)                            
-                        }
-                        tableView.reloadData()
-                        stopSpinner()
-                    }
-                }else {
-                    print("Empty Response")
-                }
-                
-            }else {
-                print("Request Error")
-            }
-        }
-        tarefa.resume()
+    private func setupLabel(tableView: ShowCell){
+        tableView.showLabelView.textColor = Constants.orangeDefaultColor
+        tableView.showLabelView.font = UIFont(name: "HiraMaruPro-W4", size: 17)
+        tableView.showLabelView.textAlignment = .left
     }
     
-    func startSpinner(){
-        addChild(spinner)
-        spinner.view.frame = view.frame
-        view.addSubview(spinner.view)
-        spinner.didMove(toParent: self)
-    }
-    
-    func stopSpinner(){
-        spinner.willMove(toParent: nil)
-        spinner.view.removeFromSuperview()
-        spinner.removeFromParent()
+    private func setupImageView(tableView: ShowCell){
+        tableView.showImageView.layer.cornerRadius = 20
+        tableView.showImageView.clipsToBounds = true
+        tableView.showImageView.layer.backgroundColor = Constants.grayDefaultColor.cgColor
     }
 }

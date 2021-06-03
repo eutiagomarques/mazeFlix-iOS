@@ -22,5 +22,18 @@ class SpinnerViewController: UIViewController {
         spinner.centerXAnchor.constraint(equalTo: view.centerXAnchor).isActive = true
         spinner.centerYAnchor.constraint(equalTo: view.centerYAnchor).isActive = true
     }
+    
+//    func startSpinner(){
+//        addChild(spinner)
+//        spinner.view.frame = view.frame
+//        view.addSubview(spinner.view)
+//        spinner.didMove(toParent: self)
+//    }
+    
+//    func stopSpinner(){
+//        spinner.willMove(toParent: nil)
+//        spinner.view.removeFromSuperview()
+//        spinner.removeFromParent()
+//    }
 }
 

@@ -6,7 +6,7 @@ target 'mazeFlix-iOS' do
   use_frameworks!
 
   # Pods for mazeFlix-iOS
-  pod 'SwiftyJSON', '~> 4.0'
+  pod 'SDWebImage', '~> 5.0'
 
   target 'mazeFlix-iOSTests' do
     inherit! :search_paths
