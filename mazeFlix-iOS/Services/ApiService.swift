@@ -7,30 +7,45 @@
 
 import Foundation
 
-class ApiService {
+struct ApiService {
     
-    
-    func getSeries(page: Int) -> [Show]{
-        var showsData: [ShowData] = []
-        var showsList: [Show] = []
-        let semaphore = DispatchSemaphore(value: 0)
-        let url = URL(string: Constants.baseUrl + "shows?page=\(page)" )
-        let task = URLSession.shared.dataTask(with: url!) {(response, request, erro) in
-            if erro == nil {
-                if response != nil {
-                    do{
-                        showsData = try! JSONDecoder().decode([ShowData].self, from: response!)
-                        showsData.forEach { (show) in
-                            showsList.append(Show(dataObj: show))
-                        }
-                        semaphore.signal()
-                    }
+    func getSeriesData(page: Int, completionHandler: @escaping (ShowResponse?) -> ()) {
+        
+        let url =  URL(string: Constants.baseUrl + "shows?page=\(page)")
+
+        URLSession.shared.dataTask(with: url!) { (data, response, error) in
+            if(error == nil && data != nil)
+            {
+                do {
+                    let showsData = try JSONDecoder().decode([ShowData].self, from: data!)
+                    let result = ShowResponse(showsData: showsData)
+                    completionHandler(result)
+
+                } catch let error {
+                    debugPrint(error)
                 }
             }
-        }
-        task.resume()
-        _ = semaphore.wait(timeout: .distantFuture)
-        return showsList
+        }.resume()
+    }
+    
+    func searchSeries(searchTerm: String, completionHandler: @escaping (SerieResponse?) -> ()) {
+        let term = searchTerm.replacingOccurrences(of: " ", with: "")
+        print(term)
+        let url =  URL(string: Constants.baseUrl + "search/shows?q=\(term)")
+
+        URLSession.shared.dataTask(with: url!) { (data, response, error) in
+            if(error == nil && data != nil)
+            {
+                do {
+                    let serieData = try JSONDecoder().decode([SerieData].self, from: data!)
+                    let result = SerieResponse(seriesData: serieData)
+                    completionHandler(result)
+
+                } catch let error {
+                    debugPrint(error)
+                }
+            }
+        }.resume()
     }
     
 }
