@@ -15,7 +15,7 @@ class SeriesDetailsController: UIViewController, SeriesControllerDelegate{
     @IBOutlet weak var nameLabel: UILabel!
     @IBOutlet weak var scheduleLabel: UILabel!
     @IBOutlet weak var genreLabel: UILabel!
-    @IBOutlet weak var sumaryLabel: UILabel!
+    @IBOutlet weak var sumaryLabel: UITextView!
     @IBOutlet weak var episodesButton: UIButton!
     
     
@@ -80,15 +80,15 @@ class SeriesDetailsController: UIViewController, SeriesControllerDelegate{
                 genres.append("\(genre) ")
             })
             
-            let formattedGenres = genres.trimmingCharacters(in: .whitespaces).replacingOccurrences(of: " ", with: ",")
+            let formattedGenres = genres.trimmingCharacters(in: .whitespaces).replacingOccurrences(of: " ", with: ", ")
             genreLabel.text = formattedGenres
         }
     }
     
     fileprivate func setupSumaryLabel(){
         do {
-            try sumaryLabel.text = showDetails.summary?.htmlAttributedString()
-
+            try sumaryLabel.text = showDetails.summary?.htmlAttributedString()            
+            sumaryLabel.scrollRangeToVisible(NSMakeRange(0, 0))
         } catch {
             sumaryLabel.text = "Error to convert"
         }
