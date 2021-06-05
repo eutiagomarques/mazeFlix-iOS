@@ -8,6 +8,6 @@
 import Foundation
 
 struct ScheduleData: Decodable {
-    var time: String?
+    var time: String
     var days: [String]?
 }

@@ -58,7 +58,9 @@
                             <constraint firstItem="qkb-de-HNU" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="94.5" id="sQ8-cy-Dlk"/>
                         </constraints>
                     </view>
-                    <navigationItem key="navigationItem" id="iPi-A2-7bz"/>
+                    <navigationItem key="navigationItem" id="iPi-A2-7bz">
+                        <barButtonItem key="backBarButtonItem" title="Home" id="hRf-8q-OGK"/>
+                    </navigationItem>
                     <connections>
                         <outlet property="btnGoSeriesView" destination="xed-r0-Uxf" id="o4X-oO-Jhg"/>
                         <outlet property="labelWelcomeMessage" destination="s5U-Ho-GIU" id="VXV-kM-aSb"/>
@@ -122,6 +124,7 @@
                                         <connections>
                                             <outlet property="showImageView" destination="6e7-Gy-eyB" id="XjE-GX-jFr"/>
                                             <outlet property="showLabelView" destination="fQZ-cd-MIB" id="MT7-dF-C3B"/>
+                                            <segue destination="JOg-dc-nuE" kind="show" identifier="seriesDetails" id="7xe-tu-Odi"/>
                                         </connections>
                                     </tableViewCell>
                                 </prototypes>
@@ -193,7 +196,7 @@
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" title="Series" id="IGZ-qN-y1M">
-                        <barButtonItem key="backBarButtonItem" title="Home" id="nXl-kO-QEJ"/>
+                        <barButtonItem key="backBarButtonItem" title="Series" id="nXl-kO-QEJ"/>
                     </navigationItem>
                     <connections>
                         <outlet property="nextPageButton" destination="2jw-xm-A0b" id="x7T-dd-7q6"/>
@@ -206,6 +209,121 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="tkQ-CB-mxV" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="2728.985507246377" y="116.51785714285714"/>
+        </scene>
+        <!--Series Details-->
+        <scene sceneID="8Qz-Gu-ndN">
+            <objects>
+                <viewController id="JOg-dc-nuE" customClass="SeriesDetailsController" customModule="mazeFlix_iOS" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="r1W-Od-j5B">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="TopLeft" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" lineBreakMode="wordWrap" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ig4-13-XyS">
+                                <rect key="frame" x="114" y="522" width="270" height="40"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="RYb-an-nfs">
+                                <rect key="frame" x="114" y="577" width="270" height="20"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="TopLeft" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" lineBreakMode="wordWrap" numberOfLines="10" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Yug-Ho-Urn">
+                                <rect key="frame" x="114" y="612" width="270" height="160"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="LlI-ms-Tcl">
+                                <rect key="frame" x="162" y="800" width="91" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Episodes List"/>
+                                <connections>
+                                    <action selector="showEpisodesList:" destination="JOg-dc-nuE" eventType="touchUpInside" id="RqL-aj-tMi"/>
+                                    <segue destination="Wb8-C6-nNG" kind="show" identifier="episodesList" id="6Fu-Be-ADf"/>
+                                </connections>
+                            </button>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Ezu-Az-8Ug">
+                                <rect key="frame" x="62" y="140" width="290" height="302"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" verticalHuggingPriority="251" fixedFrame="YES" text="Name:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Zzo-qj-7EB">
+                                <rect key="frame" x="30" y="476" width="50" height="20"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Schedule:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="z8p-yX-GHA">
+                                <rect key="frame" x="30" y="531" width="75" height="20"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Genre:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="3JF-cg-WTT">
+                                <rect key="frame" x="30" y="576" width="50" height="20"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Sumary:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="17L-37-XYq">
+                                <rect key="frame" x="30" y="680" width="62" height="18"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="tlV-we-q5J">
+                                <rect key="frame" x="114" y="467" width="270" height="40"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="IGH-O8-uqC"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    </view>
+                    <navigationItem key="navigationItem" title="Series Details" id="Jaf-00-4qc">
+                        <barButtonItem key="backBarButtonItem" title="Series Details" id="gEg-rM-Rxk"/>
+                    </navigationItem>
+                    <connections>
+                        <outlet property="episodesButton" destination="LlI-ms-Tcl" id="48y-7Z-hLZ"/>
+                        <outlet property="genreLabel" destination="RYb-an-nfs" id="Hwc-5a-s5V"/>
+                        <outlet property="nameLabel" destination="tlV-we-q5J" id="3zd-D5-OVu"/>
+                        <outlet property="scheduleLabel" destination="ig4-13-XyS" id="L7a-SF-YBh"/>
+                        <outlet property="showImageView" destination="Ezu-Az-8Ug" id="ZKm-fT-UTN"/>
+                        <outlet property="sumaryLabel" destination="Yug-Ho-Urn" id="62I-jb-5hE"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dnb-x3-XTi" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="3505.7971014492755" y="116.51785714285714"/>
+        </scene>
+        <!--Episodes-->
+        <scene sceneID="bfp-Pw-d9z">
+            <objects>
+                <viewController id="Wb8-C6-nNG" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="PWn-z8-QPn">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <viewLayoutGuide key="safeArea" id="GuW-rj-a9n"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    </view>
+                    <navigationItem key="navigationItem" title="Episodes" id="5q8-FG-tj5">
+                        <barButtonItem key="backBarButtonItem" title="Episodes" id="xUf-Rw-Bgq"/>
+                    </navigationItem>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="hSI-UD-nHU" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="4294" y="117"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="67Q-e2-nJu">
@@ -230,7 +348,7 @@
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="NGu-lI-E8A" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1050.7246376811595" y="116.51785714285714"/>
+            <point key="canvasLocation" x="1194" y="117"/>
         </scene>
     </scenes>
     <resources>

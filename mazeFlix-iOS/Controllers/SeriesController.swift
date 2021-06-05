@@ -9,6 +9,10 @@ import Foundation
 import UIKit
 import SDWebImage
 
+protocol SeriesControllerDelegate {
+    func showDetails(_ show: ShowData)
+}
+
 class SeriesController: UIViewController, UITableViewDataSource {
     
     
@@ -16,12 +20,13 @@ class SeriesController: UIViewController, UITableViewDataSource {
     var apiPage = 0
     var showList: [ShowData]? = nil
     let api: ApiService = ApiService()
-    let spinner = SpinnerViewController()
     @IBOutlet weak var tableView: UITableView!
     @IBOutlet weak var searchButton: UIButton!
     @IBOutlet weak var searchInputText: UITextField!
     @IBOutlet weak var previosPageButton: UIButton!
     @IBOutlet weak var nextPageButton: UIButton!
+    
+//    var delegate
     
     
     // MARK: - View Lifecycle
@@ -119,5 +124,15 @@ class SeriesController: UIViewController, UITableViewDataSource {
     
     private func setEnabledButton(value: Bool){
         previosPageButton.isEnabled = value
-    }    
+    }
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if(segue.identifier == "seriesDetails"){
+            if let indexPath = tableView.indexPathForSelectedRow{
+                let selectedShow = self.showList![indexPath.row]
+                let seriesDetailsController = segue.destination as! SeriesDetailsController
+                seriesDetailsController.showDetails(selectedShow)
+            }
+        }
+    }
 }
