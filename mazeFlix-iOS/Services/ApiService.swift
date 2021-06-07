@@ -48,4 +48,41 @@ struct ApiService {
         }.resume()
     }
     
+    func getSeriesEpisodes(serieID: Int, completionHandler: @escaping (EpisodesResponse?) -> ()) {
+        
+        let url =  URL(string: Constants.baseUrl + "shows/\(serieID)/episodes")
+
+        URLSession.shared.dataTask(with: url!) { (data, response, error) in
+            if(error == nil && data != nil)
+            {
+                do {
+                    let episodesData = try JSONDecoder().decode([EpisodeData].self, from: data!)
+                    let result = EpisodesResponse(episodesData: episodesData)
+                    completionHandler(result)
+
+                } catch let error {
+                    debugPrint(error)
+                }
+            }
+        }.resume()
+    }
+    
+    func getNumberSeasons(serieID: Int, completionHandler: @escaping (SeasonResponse?) -> ()) {
+        
+        let url =  URL(string: Constants.baseUrl + "shows/\(serieID)/seasons")
+        URLSession.shared.dataTask(with: url!) { (data, response, error) in
+            if(error == nil && data != nil)
+            {
+                do {
+                    let seasonData = try JSONDecoder().decode([SeasonData].self, from: data!)
+                    let result = SeasonResponse(seasons: seasonData)
+                    completionHandler(result)
+
+                } catch let error {
+                    debugPrint(error)
+                }
+            }
+        }.resume()
+    }
+    
 }

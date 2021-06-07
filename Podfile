@@ -7,6 +7,7 @@ target 'mazeFlix-iOS' do
 
   # Pods for mazeFlix-iOS
   pod 'SDWebImage', '~> 5.0'
+  pod 'SkeletonView'
 
   target 'mazeFlix-iOSTests' do
     inherit! :search_paths

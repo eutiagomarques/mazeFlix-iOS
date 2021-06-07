@@ -13,5 +13,5 @@ struct EpisodeData: Decodable {
     var season : Int?
     var number : Int?
     var image: ImageData?
-    var sumary: String?
+    var summary: String?
 }

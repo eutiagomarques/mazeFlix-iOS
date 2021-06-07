@@ -22,22 +22,22 @@ class MainController: UIViewController {
         
     }
     
-    // MARK: - Layout
+    // MARK: - Layout Elements
     private func setupViewElements(){
-        setupLabels()
-        setupButtons()
+        setupLabel()
+        setupButton()
         setupNavigationBar()
     }
     
-    private func setupButtons(){
+    private func setupButton(){
         btnGoSeriesView.setTitle("Go To Series", for: UIControl.State.normal) 
         btnGoSeriesView.tintColor = Constants.orangeDefaultColor
         btnGoSeriesView.layer.borderWidth = 3.0
         btnGoSeriesView.layer.borderColor = Constants.orangeDefaultColor.cgColor
-        btnGoSeriesView.layer.cornerRadius = 15.0
+        btnGoSeriesView.layer.cornerRadius = 10.0
     }
     
-    private func setupLabels(){
+    private func setupLabel(){
         labelWelcomeMessage.text = "Welcome to MazeFlix"
         labelWelcomeMessage.textColor = Constants.grayDefaultColor
         labelWelcomeMessage.font = UIFont(name: "HiraMaruPro-W4", size: 19)
@@ -46,7 +46,8 @@ class MainController: UIViewController {
     
     private func setupNavigationBar(){
         self.navigationController!.navigationBar.isTranslucent = true
-        self.navigationController!.navigationBar.titleTextAttributes = [.foregroundColor: Constants.orangeDefaultColor]
+        self.navigationController!.navigationBar.largeTitleTextAttributes  = [.foregroundColor: Constants.orangeDefaultColor]
+        self.navigationController?.navigationBar.backItem?.backBarButtonItem?.tintColor = Constants.orangeDefaultColor
     }
 }
 

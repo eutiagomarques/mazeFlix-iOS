@@ -10,6 +10,9 @@
 		5220807760A3F50F79FF7670 /* Pods_mazeFlix_iOS.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B908EBE8BBDA239DFF54F3E5 /* Pods_mazeFlix_iOS.framework */; };
 		5271986035F52F063963AFB3 /* Pods_mazeFlix_iOSTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BEF5A1DF418EFD85A2D7D3FB /* Pods_mazeFlix_iOSTests.framework */; };
 		6F8067E8DFD57B0033085981 /* Pods_mazeFlix_iOS_mazeFlix_iOSUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C59107EA9974738755BC57C5 /* Pods_mazeFlix_iOS_mazeFlix_iOSUITests.framework */; };
+		EA1CD4B6266C2242001959FC /* EpisodesResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA1CD4B5266C2242001959FC /* EpisodesResponse.swift */; };
+		EA1CD4BB266C2301001959FC /* EpisodesController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA1CD4BA266C2301001959FC /* EpisodesController.swift */; };
+		EA1CD4C0266C2CF1001959FC /* EpisodeDetailsController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA1CD4BF266C2CF1001959FC /* EpisodeDetailsController.swift */; };
 		EA5611EE26657DC000AA961B /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA5611ED26657DC000AA961B /* AppDelegate.swift */; };
 		EA5611F026657DC000AA961B /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA5611EF26657DC000AA961B /* SceneDelegate.swift */; };
 		EA5611F226657DC000AA961B /* MainController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA5611F126657DC000AA961B /* MainController.swift */; };
@@ -23,6 +26,7 @@
 		EA56124426658AAA00AA961B /* ImageData.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA56124326658AAA00AA961B /* ImageData.swift */; };
 		EA56124926658AD100AA961B /* ScheduleData.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA56124826658AD100AA961B /* ScheduleData.swift */; };
 		EA56124E26658B0300AA961B /* EpisodeData.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA56124D26658B0300AA961B /* EpisodeData.swift */; };
+		EA57D9DD266D9AE3001755C4 /* Loading.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA57D9DC266D9AE3001755C4 /* Loading.swift */; };
 		EAB79B6B2665981A00D439B5 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = EAB79B6A2665981A00D439B5 /* Constants.swift */; };
 		EAB79B732665C9AD00D439B5 /* SeriesController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EAB79B722665C9AD00D439B5 /* SeriesController.swift */; };
 		EADB92BD266A8F5600275767 /* ShowResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = EADB92BC266A8F5600275767 /* ShowResponse.swift */; };
@@ -31,6 +35,8 @@
 		EADB92D8266AF4E400275767 /* StringHtml.swift in Sources */ = {isa = PBXBuildFile; fileRef = EADB92D7266AF4E400275767 /* StringHtml.swift */; };
 		EAE6C9CF2669492000B2503B /* ApiService.swift in Sources */ = {isa = PBXBuildFile; fileRef = EAE6C9CE2669492000B2503B /* ApiService.swift */; };
 		EAE6C9EB266955C500B2503B /* ShowCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = EAE6C9EA266955C500B2503B /* ShowCell.swift */; };
+		EAF832E7266C35E70019DDA9 /* SeasonData.swift in Sources */ = {isa = PBXBuildFile; fileRef = EAF832E6266C35E70019DDA9 /* SeasonData.swift */; };
+		EAF832EC266C36540019DDA9 /* SeasonResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = EAF832EB266C36540019DDA9 /* SeasonResponse.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -60,6 +66,9 @@
 		C169A8A81208E92015D7BD05 /* Pods-mazeFlix-iOSTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-mazeFlix-iOSTests.release.xcconfig"; path = "Target Support Files/Pods-mazeFlix-iOSTests/Pods-mazeFlix-iOSTests.release.xcconfig"; sourceTree = "<group>"; };
 		C59107EA9974738755BC57C5 /* Pods_mazeFlix_iOS_mazeFlix_iOSUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_mazeFlix_iOS_mazeFlix_iOSUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		E9C6396E25D6F6D449ED3600 /* Pods-mazeFlix-iOS-mazeFlix-iOSUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-mazeFlix-iOS-mazeFlix-iOSUITests.release.xcconfig"; path = "Target Support Files/Pods-mazeFlix-iOS-mazeFlix-iOSUITests/Pods-mazeFlix-iOS-mazeFlix-iOSUITests.release.xcconfig"; sourceTree = "<group>"; };
+		EA1CD4B5266C2242001959FC /* EpisodesResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EpisodesResponse.swift; sourceTree = "<group>"; };
+		EA1CD4BA266C2301001959FC /* EpisodesController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EpisodesController.swift; sourceTree = "<group>"; };
+		EA1CD4BF266C2CF1001959FC /* EpisodeDetailsController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EpisodeDetailsController.swift; sourceTree = "<group>"; };
 		EA5611EA26657DC000AA961B /* mazeFlix-iOS.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "mazeFlix-iOS.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		EA5611ED26657DC000AA961B /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		EA5611EF26657DC000AA961B /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -79,6 +88,7 @@
 		EA56124326658AAA00AA961B /* ImageData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageData.swift; sourceTree = "<group>"; };
 		EA56124826658AD100AA961B /* ScheduleData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScheduleData.swift; sourceTree = "<group>"; };
 		EA56124D26658B0300AA961B /* EpisodeData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EpisodeData.swift; sourceTree = "<group>"; };
+		EA57D9DC266D9AE3001755C4 /* Loading.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Loading.swift; sourceTree = "<group>"; };
 		EAB79B6A2665981A00D439B5 /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 		EAB79B722665C9AD00D439B5 /* SeriesController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SeriesController.swift; sourceTree = "<group>"; };
 		EADB92BC266A8F5600275767 /* ShowResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShowResponse.swift; sourceTree = "<group>"; };
@@ -87,6 +97,8 @@
 		EADB92D7266AF4E400275767 /* StringHtml.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StringHtml.swift; sourceTree = "<group>"; };
 		EAE6C9CE2669492000B2503B /* ApiService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ApiService.swift; sourceTree = "<group>"; };
 		EAE6C9EA266955C500B2503B /* ShowCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShowCell.swift; sourceTree = "<group>"; };
+		EAF832E6266C35E70019DDA9 /* SeasonData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SeasonData.swift; sourceTree = "<group>"; };
+		EAF832EB266C36540019DDA9 /* SeasonResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SeasonResponse.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -212,6 +224,8 @@
 				EA5611F126657DC000AA961B /* MainController.swift */,
 				EAB79B722665C9AD00D439B5 /* SeriesController.swift */,
 				EADB92D1266ADBDE00275767 /* SeriesDetailsController.swift */,
+				EA1CD4BA266C2301001959FC /* EpisodesController.swift */,
+				EA1CD4BF266C2CF1001959FC /* EpisodeDetailsController.swift */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -223,6 +237,8 @@
 				EAE6C9D6266949F800B2503B /* JsonObjects */,
 				EADB92BC266A8F5600275767 /* ShowResponse.swift */,
 				EADB92C9266A9B8900275767 /* SerieResponse.swift */,
+				EA1CD4B5266C2242001959FC /* EpisodesResponse.swift */,
+				EAF832EB266C36540019DDA9 /* SeasonResponse.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -239,6 +255,7 @@
 			isa = PBXGroup;
 			children = (
 				EADB92D7266AF4E400275767 /* StringHtml.swift */,
+				EA57D9DC266D9AE3001755C4 /* Loading.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -259,6 +276,7 @@
 				EA56124326658AAA00AA961B /* ImageData.swift */,
 				EA56124826658AD100AA961B /* ScheduleData.swift */,
 				EA56124D26658B0300AA961B /* EpisodeData.swift */,
+				EAF832E6266C35E70019DDA9 /* SeasonData.swift */,
 			);
 			path = JsonObjects;
 			sourceTree = "<group>";
@@ -511,20 +529,26 @@
 			files = (
 				EA5611F226657DC000AA961B /* MainController.swift in Sources */,
 				EA56124E26658B0300AA961B /* EpisodeData.swift in Sources */,
+				EA1CD4B6266C2242001959FC /* EpisodesResponse.swift in Sources */,
 				EAE6C9CF2669492000B2503B /* ApiService.swift in Sources */,
+				EA1CD4C0266C2CF1001959FC /* EpisodeDetailsController.swift in Sources */,
 				EA56124426658AAA00AA961B /* ImageData.swift in Sources */,
 				EA5611EE26657DC000AA961B /* AppDelegate.swift in Sources */,
+				EAF832EC266C36540019DDA9 /* SeasonResponse.swift in Sources */,
 				EADB92D2266ADBDE00275767 /* SeriesDetailsController.swift in Sources */,
 				EADB92CA266A9B8900275767 /* SerieResponse.swift in Sources */,
 				EADB92D8266AF4E400275767 /* StringHtml.swift in Sources */,
+				EA57D9DD266D9AE3001755C4 /* Loading.swift in Sources */,
 				EA56123726658A4800AA961B /* ShowData.swift in Sources */,
 				EADB92BD266A8F5600275767 /* ShowResponse.swift in Sources */,
 				EAB79B6B2665981A00D439B5 /* Constants.swift in Sources */,
 				EAB79B732665C9AD00D439B5 /* SeriesController.swift in Sources */,
+				EAF832E7266C35E70019DDA9 /* SeasonData.swift in Sources */,
 				EA5611F026657DC000AA961B /* SceneDelegate.swift in Sources */,
 				EAE6C9EB266955C500B2503B /* ShowCell.swift in Sources */,
 				EA56124926658AD100AA961B /* ScheduleData.swift in Sources */,
 				EA56123F26658A5400AA961B /* SerieData.swift in Sources */,
+				EA1CD4BB266C2301001959FC /* EpisodesController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

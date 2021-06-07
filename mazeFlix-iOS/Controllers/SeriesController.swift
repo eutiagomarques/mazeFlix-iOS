@@ -25,9 +25,7 @@ class SeriesController: UIViewController, UITableViewDataSource {
     @IBOutlet weak var searchInputText: UITextField!
     @IBOutlet weak var previosPageButton: UIButton!
     @IBOutlet weak var nextPageButton: UIButton!
-    
-//    var delegate
-    
+    var loader = UIAlertController()
     
     // MARK: - View Lifecycle
     override func viewDidLoad() {
@@ -35,6 +33,7 @@ class SeriesController: UIViewController, UITableViewDataSource {
         tableView.dataSource = self
         setEnabledButton(value: false)
         getTableData()
+
     }
     
     // MARK: - TableView LifeCycle
@@ -55,12 +54,18 @@ class SeriesController: UIViewController, UITableViewDataSource {
         return cell
     }
     
+    
+    // MARK: - Table Data
     func getTableData(){
         api.getSeriesData(page: apiPage) { (response) in
             if(response?.shows != nil){
                 self.showList = response?.shows
                 DispatchQueue.main.async {
                     self.tableView.reloadData()
+                }
+                
+                DispatchQueue.main.asyncAfter(deadline: .now() + 0.5) {
+                    self.stopLoading(loader: self.loader)
                 }
             }
         }
@@ -77,19 +82,25 @@ class SeriesController: UIViewController, UITableViewDataSource {
                         shows.append(serie.show)
                     })
                     self.showList = shows
-                    
                     DispatchQueue.main.async {
                         self.tableView.reloadData()
                     }
+                    
+                    DispatchQueue.main.asyncAfter(deadline: .now() + 0.5) {
+                        self.stopLoading(loader: self.loader)
+                    }
+                    
                 }
             }
             
         }
     }
     
+    
     //MARK: - Buttons Events
     @IBAction func startSearch(_ sender: Any) {
         if(searchInputText.text != nil){
+            loader = startLoading()
             searchSeries(term: searchInputText.text!)
         }
     }
@@ -98,6 +109,7 @@ class SeriesController: UIViewController, UITableViewDataSource {
         if(apiPage == 0){
             setEnabledButton(value: true)
         }
+        loader = startLoading()
         apiPage+=1
         getTableData()
     }
@@ -106,6 +118,7 @@ class SeriesController: UIViewController, UITableViewDataSource {
         if(apiPage == 1){
             setEnabledButton(value: false)
         }
+        loader = startLoading()
         apiPage-=1
         getTableData()
     }
@@ -126,6 +139,7 @@ class SeriesController: UIViewController, UITableViewDataSource {
         previosPageButton.isEnabled = value
     }
     
+    // MARK: - Segue Method
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if(segue.identifier == "seriesDetails"){
             if let indexPath = tableView.indexPathForSelectedRow{
